@@ -52,7 +52,7 @@ var gramAnalysis = function(text) {
       }
       else if (isPunc(piece)) {
         chunk = chunk+piece;
-      } else {
+      } else if (/[a-z\d]/.test(piece)){
         chunk = chunk+"-";
       }
     });
