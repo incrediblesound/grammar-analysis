@@ -66,13 +66,13 @@ var gramAnalysis = function(text) {
   forEach(grammar, function(line) { 
     var elements = line.split(/(\-|[A-Za-z]+)/)
     forEach(elements, function(elem) { 
-      if(elem[l] === '-') {
+      if(elem === '-') {
         contentWords += 1;
       } 
-      else if (isPart(elem[l])) {
+      else if (isPart(elem)) {
         grammarWords += 1;
       }
-      else if (elem[l] === ',') {
+      else if (elem === ',') {
         commas += 1; 
       }
     })
